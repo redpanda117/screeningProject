@@ -8,13 +8,19 @@ fetch(
   { method: 'GET' }
 )
 .then( response => response.json() )
-
+//going through the json data
 .then( function(data){
+  //getting the urls images of the results
   var i;
-  
   for (i = 0; i < 25; i++) {
     let images = data.results[i].urls.thumb; 
-    console.log(images);
+   
+    var img = document.createElement("img");
+    img.src = images;
+
+     console.log(img);
+     
+    document.getElementById("box1").appendChild(img);
   }
 
 } )
