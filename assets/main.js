@@ -8,8 +8,19 @@ fetch(
   { method: 'GET' }
 )
 .then( response => response.json() )
-.then( json => console.log(json) )
+
+.then( function(data){
+  var i;
+  
+  for (i = 0; i < 25; i++) {
+    let images = data.results[i].urls.thumb; 
+    console.log(images);
+  }
+
+} )
 .catch( error => console.error('error:', error) );
+
+
 //clear input
 document.getElementById("userInput").value = "";
 }
