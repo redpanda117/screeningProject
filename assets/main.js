@@ -23,7 +23,7 @@ input.addEventListener("keyup", function(event) {
 
 //getting json data from unsplash
 fetch(
-  'https://api.unsplash.com/photos/?client_id=39ecb897c1aef54f924ea8933270bfcb898e3618437cd8abf9eb7240671dd777',
+  'https://api.unsplash.com/search/photos?page=1&per_page=25&query=office&client_id=39ecb897c1aef54f924ea8933270bfcb898e3618437cd8abf9eb7240671dd777',
   { method: 'GET' }
 )
 .then( response => response.json() )
