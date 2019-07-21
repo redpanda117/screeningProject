@@ -1,0 +1,88 @@
+#pagewrap {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    margin: 0.5em auto;
+    padding: 0.5em 0.5em 0em 0.5em;
+    max-width: 1400px;
+  }
+  
+  #flexwrapper {
+    width: 80%;
+    height: auto;
+    background-color: white;
+    display: flex; /*sets parent container to flex*/
+    align-items: center;
+    justify-content: space-around; /*sets spacing on horizontal axis*/
+    margin: 3em auto 0 auto;
+    padding: 0.5em;
+  }
+  
+  h1.header {
+    font-family: "Germania One", helvetica;
+    font-size: 6em;
+    text-align: center;
+    padding-top: 0.25em;
+  }
+  
+  .box1 {
+    width: 100%;
+    height: 20em;
+    background-color: pink;
+    text-align: left;
+    padding: 0.5em;
+    margin: 0.5em;
+    overflow: scroll;
+  }
+  
+  p {
+    font-family: helvetica;
+    font-size: 1em;
+    text-align: center;
+  }
+  
+  footer {
+    width: 80%;
+    margin: 0 auto;
+    height: autoem;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  footer span {
+    color: white;
+    margin: 0.75em auto 1.5em auto;
+    font-family: "Germania One";
+    font-size: 2em;
+  }
+  
+  /*MEEEEEDIAAAA QUERIES*/
+  
+  @media only screen and (max-width: 800px) {
+    
+    
+    #flexwrapper{
+      display: block;
+      width: 95%;
+      margin: 0 auto;
+    }
+    
+    h1.header {
+      font-size: 1.5em;
+      padding-top: 0;
+    }
+    
+    
+  .box1{
+      width: 90%;
+      margin: .5rem 0 .5rem .85rem;
+  
+      }
+  
+    footer span {
+      font-size: 0.75em;
+    }
+  }
+  
