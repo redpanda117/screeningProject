@@ -1,6 +1,10 @@
 // javascript grab the value of what the user click the button in the input field
 function grabUserInput(){
+//clear the div if there are any images already there
+document.getElementById("box1").innerHTML = "";
+//getting the the user input value
 let inputvalue = document.getElementById("userInput").value;
+//check if we got any value and the correct vaule the user enter
 console.log(inputvalue);
 //getting json data from unsplash
 fetch(
@@ -13,13 +17,10 @@ fetch(
   //getting the urls images of the results
   var i;
   for (i = 0; i < 25; i++) {
-    let images = data.results[i].urls.thumb; 
-   
+    let images = data.results[i].urls.thumb;
+    //creating the images to then add them to the div  
     var img = document.createElement("img");
     img.src = images;
-
-     console.log(img);
-     
     document.getElementById("box1").appendChild(img);
   }
 
