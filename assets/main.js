@@ -32,11 +32,9 @@ fetch(
 document.getElementById("userInput").value = "";
 }
 
-/*this was made to take the input when user user enter.
-was getting onclick errors
-and then it was not even showing any errors but still 
-not grabing the vaule when user enter key*/
+/*this was made to take the input when user user enter.*/
 let input = document.getElementById("userInput");
+// add condition statement to remove addEventListener error
 if(input){
 input.addEventListener("keyup", function(event) {
     event.preventDefault();

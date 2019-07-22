@@ -15,9 +15,12 @@
     align-items: center;
     justify-content: space-around; /*sets spacing on horizontal axis*/
     margin: 3em auto 0 auto;
+    margin-top: 10px;
     padding: 0.5em;
   }
-  
+  #searchBox{
+    text-align: center;
+  }
   h1.header {
     font-family: "Germania One", helvetica;
     font-size: 6em;
@@ -28,7 +31,7 @@
   #box1 {
     width: 100%;
     height: 20em;
-    background-color: pink;
+    background-color: rgb(255, 255, 255);
     text-align: center;
     padding: 0.5em;
     margin: 0.5em;
@@ -41,26 +44,7 @@
     font-size: 1em;
     text-align: center;
   }
-  
-  footer {
-    width: 80%;
-    margin: 0 auto;
-    height: autoem;
-    background-color: red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  footer span {
-    color: white;
-    margin: 0.75em auto 1.5em auto;
-    font-family: "Germania One";
-    font-size: 2em;
-  }
-  
-  /*MEEEEEDIAAAA QUERIES*/
-  
+    
   @media only screen and (max-width: 800px) {
     
     
