@@ -28,11 +28,8 @@ fetch(
     img.src = images;
     document.getElementById("unsplashResults").appendChild(img);
   }
-
-} )
+})
 .catch( error => console.error('error:', error) );
-
-
 //clear input
 document.getElementById("userInput").value = "";
 }
