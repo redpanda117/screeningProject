@@ -1,11 +1,16 @@
 // javascript grab the value of what the user click the button in the input field
 function grabUserInput(){
 //clear the div if there are any images already there
-document.getElementById("box1").innerHTML = "";
+document.getElementById("unsplashResults").innerHTML = "";
 //getting the the user input value
 let inputvalue = document.getElementById("userInput").value;
 //check if we got any value and the correct vaule the user enter
 console.log(inputvalue);
+//display user search text
+var searchElement = document.createElement("h2");
+var searchText = document.createTextNode('Search results for '+ inputvalue);
+searchElement.appendChild(searchText);
+document.getElementById("unsplashResults").appendChild(searchElement);
 //getting json data from unsplash
 fetch(
   'https://api.unsplash.com/search/photos?page=1&per_page=25&query='+ inputvalue +'&client_id=39ecb897c1aef54f924ea8933270bfcb898e3618437cd8abf9eb7240671dd777',
@@ -21,7 +26,7 @@ fetch(
     //creating the images to then add them to the div  
     var img = document.createElement("img");
     img.src = images;
-    document.getElementById("box1").appendChild(img);
+    document.getElementById("unsplashResults").appendChild(img);
   }
 
 } )
